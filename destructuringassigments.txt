@@ -1,0 +1,37 @@
+destructuring assigments on arrays and objects
+
+let z = [4,5,6];
+let four = z [0]; // set variables to individual values from the array the old way is to the left.
+let five = z [1]; //
+
+console.log(four,five);
+
+ES6 changes that with Destructuring assigment
+
+let z = [4,5,6];
+let [four,five]=z; // looks for the value of four and five and assigns it 
+
+console.log(four,five);
+// another example
+let animals = ["Simba","Zazu","Ed"]; 
+let [lion,bird] = animals; // set two variables by first starting with lion which matches up to the first index
+			   // of the animals array and calls that, next it set bird to the second element  in the index of the 
+			   // animals array
+console.log(lion,bird);
+
+Destructuring on objects 
+
+let king = {name: 'Mufasa',kids:1}; // old way of setting variables to different object properties
+
+let name = king.name;
+let kids = king.kids;
+console.log(name,kids);
+
+// New way of using destructuring assigments on objects
+
+let king = {name: 'Mufasa',kids:1};
+let {name,kids}=king; //destructuring assigments here acknowledges the variables you hope to declare 
+		      // on the left and matches it with what it finds in the object to the right 
+                      // however rather than looking at the index or the order it matches the names of the properties
+		     //in the object ie name and kids
+console.log(name,kids);

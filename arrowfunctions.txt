@@ -1,0 +1,45 @@
+//Arrow functions
+
+pre-es6 syntax: function(){}  vs es6 syntax : ()=>{}
+// example of a function expression
+
+
+let cheer = function(){
+  console.log("Wohoo");
+}
+
+cheer();
+
+=> arrow functions are annoymous by default because we dont declare them using the function keyword
+
+let values = [20,30,40];
+
+let double =(n)=>{ // use of an arrow function which is by default annoymous
+  return n*2;
+}
+
+let doubled = values.map(double); // map is a new method which calls the original variable values and then 
+                                  // passes it to the function expression
+
+console.log(doubled);
+
+// we can directly put the function expression into the map method by
+let values = [20,30,40];
+
+
+let doubled = values.map((n)=>{
+  return n *2;
+});
+
+console.log(doubled);
+
+// arrow function can return data  or an expression without the use of a coding block
+
+let values = [20,30,40];
+
+
+let doubled = values.map((n)=>{
+  return n *2;
+});
+
+console.log(doubled);

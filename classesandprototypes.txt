@@ -1,0 +1,28 @@
+function wizard (){ // The function keyword in this case is not being used to create an actual function that achieves
+		    // some logical expression but will be used to host data in this object prototype
+  
+}
+
+function wizard (name,house,pet){
+  this.name = name;
+  this.house=house;
+  this.pet=pet;
+}
+
+function Wizard(name,house,pet){
+  this.name=name;
+  this.house=house;
+  this.pet=pet;
+  this.greet = ()=> `I'm ${this.name} from ${this.house}`;
+}
+Wizard.prototype.pet_name;
+
+Wizard.prototype.info=function(){              //you must use function declarartion instad of arrow as arrow creates a anomyouse th
+					      // this object. but we want this object to refer to the parent not the global
+					      // and thats why we use a afunction declartion in an object prototype
+  return `I have a ${this.pet} named ${this.pet_name} `
+};
+
+let harry = new Wizard("Harry Potter","Gryffindor","Owl");
+harry.pet_name="jace";
+console.log(harry.info());

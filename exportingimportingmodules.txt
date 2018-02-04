@@ -1,0 +1,29 @@
+Firstly creating another js file where you can hold objects ,functions , primitive values and so fourth
+
+const fellowship = ['Frodo','Samwise','Gandalf']; // array of values (string)
+const total = fellowship.length;// a strick variable that equals to the length of the above variable.
+export{fellowship,total};// // here is where we put the data in this case the variables that we are going to export
+
+
+import{fellowship,total} from './fellowship'; // we use the import method to select the var(function ,object,array or primitive value)
+				              //   and then from to select the file where is this module is located. Here we selected
+					     //the two const variables fellowship and total to do so you must include  the (,)
+console.log(fellowship,total); // then we call both variables by serparating them with a comma(,)
+// another example
+const add = (a,b)=> {
+    return a + b;
+}
+
+const multiply = (a,b)=>{
+    return a * b;
+}
+
+export{add, multiply};
+export default multiply; // here we effectively declare this multiply function as the fallback for the entire math.js module.
+
+
+//Look  closely 
+import multiply from './math.js';//since we set the default to multiply we no longer need the curley braces when we import it.
+
+console.log(multiply(4,4));
+

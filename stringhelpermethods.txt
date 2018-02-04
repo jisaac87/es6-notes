@@ -1,0 +1,23 @@
+let b = `woo${"oo".repeat(50)}`;// using string entropalation we can run the repeet of this string 50 times
+console.log(b);
+
+
+console.log("butterfly".includes("tt")); //looks for a string that would have the matching letters(true/false boolean values)
+
+console.log("butterfly".startsWith("butt"));// looks if the string starts with the certain name
+
+console.log("butterfly".endsWith("fly"));//see if the strings ends with 
+
+//Checking numbers
+
+const addToCart= (item,number)=>{
+  return Number.isFinite(number); // checks if a number is finite as in whole.
+}
+
+console.log(addToCart("soda",Math.pow(2,54)));
+
+const addToCart= (item,number)=>{
+  return Number.isSafeInterger(number); // checks whether a number is a safe interger for js to handle
+}
+
+console.log(addToCart("soda",Math.pow));

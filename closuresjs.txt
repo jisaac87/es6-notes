@@ -1,0 +1,21 @@
+// remember their creation environment and can refernce independent variables within that environment.
+
+enable function factories.
+
+enable private data.
+
+//Closure and Scoping
+
+let call = ()=> {
+  let secret = 'ES6 rocks!';
+
+  let reveal = ()=>{
+    console.log(secret);
+  }
+
+  return reveal;
+}
+
+let unveil = call();
+
+unveil();

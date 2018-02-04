@@ -1,0 +1,45 @@
+class lion extends animal { // the key is extends so to inherit the properties from the parent animal class we use extends
+  
+}
+
+class Lion extends Animal {
+  constructor(name,height,color){
+    super                 // super keyword must be used before this to acknowledge a parents constructor and will call the constructor
+  }
+}
+
+let son = new Lion("simba",2);
+
+class Animal {                    // here we created a new file with animal class init
+  constructor(name,height){
+    this.name=name;
+    this.height=height;
+  }
+  hello(){
+    console.log(`Hi! Im ${this.name} from the animal kingdom`);
+  }
+}
+
+export default Animal; // here we are exporting  this modole and setting a default to the Animal class
+
+console.log(son);
+
+import Animal from './animal.js';
+
+var king = new Animal("john",4.5);
+king.hello();
+
+class Lion extends Animal {
+  constructor(name,height,color){
+    super(name,height);
+    this.color=color;
+  }
+  hello(){
+    console.log(`Hi! I'm ${this.name} from the local boxing gym and my color is ${this.color}`);
+  }
+}
+
+let son = new Lion("simba",2,"red");
+console.log(son);
+
+son.hello();

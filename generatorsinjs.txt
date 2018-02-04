@@ -1,0 +1,57 @@
+function* letterMaker(){ // ask Sean why this is not working on my end
+
+  yield 'a';
+  yield 'b';
+  yield 'c';
+}
+
+let letterGen = letterMaker();
+
+console.log(letterGen.next().value)
+console.log(letterGen.next().value)
+console.log(letterGen.next().value)
+
+function* countMaker(){
+  let count = 0;
+  while(count <3){
+    yield count +=1;
+  }
+}
+
+let countGen = countMaker();
+
+console.log(countGen.next().value);
+
+// another example of function generators
+function* evens(){
+  let count = 0;
+  while(true){
+    count +=2;
+    yield count;
+  }
+}
+
+let sequence = evens();
+console.log(sequence.next().value);
+console.log(sequence.next().value);
+console.log(sequence.next().value);
+
+// here is an example were we can reset or generators
+function* evens(){ // here were starting a function generator with the * after the function 
+  let count = 0; // count starts at 0
+  while(true){// here were stating while true which is always true add 2 the count of zero
+    count +=2;// count + 2
+    let reset =yield count; // here we are calling the current yield count 
+    if(reset){// when reset is true which an element always is then we reset the count to zero
+      count=0;// right here
+    }
+  }
+}
+
+let sequence = evens(); //setting sequence to equal the evens function.
+console.log(sequence.next().value);//calling sequence which add 2
+console.log(sequence.next().value);//now we are at 4
+console.log(sequence.next().value);/// now the count is at 6
+console.log(sequence.next(true).value);// here since the reset is equal to true the count goes back to zero
+console.log(sequence.next().value);// now when we use the next method to get the value of count  its back to 2
+console.log(sequence.next().value);// here we are at 6

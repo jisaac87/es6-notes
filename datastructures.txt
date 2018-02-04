@@ -1,0 +1,35 @@
+The set
+
+Set = allow us to store unique values. Similar to array but you cannot have duplicates the specific feature of no duplicate values.
+
+The set store unique values.
+
+Sets prove advatageous in storing no duplicates. 
+//
+
+let a = new Set();
+
+a.add(5);
+a.add(43);
+a.add("Wohoo");
+a.add({x:50, y:200});
+console.log(a.has("Wohoo")); //has is a true or false value , looks for whats in the set array, if it does not match returns false.
+
+let numbers = [5,7,12,31];
+
+let numSet = new Set(numbers);
+
+
+for (let element of numSet.values()){
+  console.log(element);
+}
+
+// lets say we want to use the set to make the string below into individual array values.
+
+let chars = "askfnafbadfmnafpibjabsfuibasf"; //here we have a var set to a string of values
+let chars_arr = chars.split(""); // split up the string into individual letters
+
+let chars_set = new Set(chars_arr); //now we set those  values to a new set with new and Set to define them as a set
+console.log(chars_set); // now we log the information to the console.
+
+ 

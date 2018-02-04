@@ -1,0 +1,35 @@
+const addSuffix = (x)=>{ // here we have a function 
+  const concat = (y)=>{ // a function within a function that takes paramater y and adds x
+    return y + x;
+  }
+
+  return concat;
+}
+
+let add_ful = addSuffix('ful'); // here were setting a variable to the addSuffic paramater x
+let f = add_ful("fruit"); // here were setting a new variable with a paramater fruit which equals the second function y value
+			  // so the way it works is the addSuffix function with parameter x then runs into the second function thats
+     			  // y "fruit" is added to the begigning of the string in add_ful "ful"
+console.log(f);
+
+// function factories with numbers
+
+const product = (x)=>{ // we have a function called product that has one paramater, which then returns y function
+		      // which returns y * x paramater
+  return y =>{
+    return y * x;
+  }
+}
+
+let mult5 = product(5);// here we are setting a variable to product with x paramater being 5
+console.log(mult5(3));// where calling mult5 with a number of 3 which is what y function paramater is , so it looks in the product
+   		      // and see a function which take 3 * 5 and returns the value of 15.
+
+// we can shorten this completey by removing the return and curly braces 
+
+const product = x=> y => y * x; // this code is same as above example
+  
+
+let mult5 = product(10);
+let double = product(4);
+console.log(mult5(21),double(10));

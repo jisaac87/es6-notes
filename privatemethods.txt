@@ -1,0 +1,28 @@
+// here we are creating private methods. we cann call the function budget but we are using it to hold a bunch of methods
+
+const budget = ()=> {
+  let balance = 0;
+  let changeBal = (val)=>{
+    return balance +=val;
+  }
+  const deposit20 = ()=>changeBal(20); // this method set the changeBal variable to 20
+  const withdraw20 = ()=>changeBal(-20); // removes what ever the current balance and take 20 off it
+  const check=()=> balance;// checks current balance
+
+  return {                    // return all the methods , and in es6 if object pairs are the same we can 
+    deposit20:deposit20,
+    withdraw20:withdraw20,
+    check: check
+
+  }
+
+}
+
+let wallet = budget();
+
+wallet.deposit20();
+wallet.withdraw20();
+wallet.deposit20();
+wallet.deposit20();
+wallet.deposit20();
+console.log(wallet.check());

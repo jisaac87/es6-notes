@@ -1,0 +1,17 @@
+Let replaces var in es6 in term of variable assignment. Let also allows for block scoping, in contrast to var.
+
+Const declares variables that cannot be re-assigned. Constants also allow for block scoping along with ‘let.’
+
+Template literals, created by a pair of back-ticks, allow for embedded-expressions using the dollar-sign and a pair of curly braces: `${...}`
+
+Local scope refers to the set of statements, variables, objects, and more that confine to a coding block denoted by a pair of curly braces: { ... }
+
+Global scope refers to the set of statements, variables, objects, methods, and more that exist outside and beyond all local scope functions and coding blocks.
+
+The spread operator spreads individual values to allow for expansion with multiple arguments and elements. Denoted by three periods: ...
+
+Rest parameters allow for the gathering of multiple parameter calls into one array: Denoted by three periods: …
+
+Destructuring assignment on arrays allows for much more efficient array manipulation and assigns multiple variables from array data based on the index value.
+
+Destructuring assignment on objects allows for more concise object manipulation and assigns multiple variables from object data based on keynames.

@@ -1,0 +1,22 @@
+Spread Operator : {}
+
+Rest Paramaters: function (){}
+
+Destructuring Assignment simplifies extracting data on arrays and object to distinct variables
+
+// spread operator
+
+let a = [20,30,40];
+let b = [10,...a, 50]; // Spread operator simply spreads the individual values of A and interpolates it into B 
+console.log(b);
+
+let a = ['John','Joseph','Lupita'];
+let b = ['Sana','David','Evet',...a];
+console.log(b);
+
+// rest parameter function example
+function collect(...a){ // setting a paramater a with multiple expected values using the spread operator. 
+  console.log(a);
+}
+
+collect(1,2,3,4,5,6,7); // rest paramater syntax gathers each of the arguments into one individual array.

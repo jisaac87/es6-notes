@@ -1,0 +1,11 @@
+let a = `good`;
+let greeting = `${a} morning`; //Too embed variables we use dollar sign and curly braces , so in this case the a variable gets 
+			      // embedded in the greeting variable. 
+
+console.log(greeting);
+//
+
+let b = 'birthday';	//Very vitale feature to js is the template literals by utilizing the (`) back ticks and we can also embed 
+let c = `Happy ${b}`;	// variables with ${}
+
+console.log(c);

@@ -1,0 +1,8 @@
+
+String Manipulation and Number Checking
+
+String.repeat(): returns a new string of concatenated copies.
+
+Searching : with startWith,endsWith,includes and more
+
+Number checking: for type and safety

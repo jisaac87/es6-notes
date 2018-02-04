@@ -1,0 +1,34 @@
+let limit = 100;
+limit+=200; // adds 200 to the limit variable (100 + 200 =300)
+console.log(limit);
+
+const emails = ['frodo@email.com','john@email.com','joe@email.com']; // const is a read only, basically a variable that you cannot change its 
+									value. But we can still manipluate the array by using an array method
+									push.
+emails.push('pippen@email.com'); //here were pushing an new email (string) to the emails array.
+console.log(emails); // loggin the emails array to the console log
+
+let limit = 200;
+{   						//the curly braces declares its own local scope of data that ignore the global scope,
+						//both let and const have the added benefit of block scoping as opposed to the var
+  let limit = 10;
+  console.log('backstage limit', limit);
+}
+console.log('overall venue limit', limit);
+
+//function local scoping
+
+function hello(){
+  let message = "Hello!";
+  console.log(message);
+}
+
+function greeting(){
+  let message = "How are you?";
+  console.log(message);
+}
+
+hello(); // here we are invoking ie calling the function for hello
+greeting(); // same applies for greeting. This is all thanks to block scoping that we can two variables with the same name
+		// i,e message , but we get two different answers when we invoke them.
+

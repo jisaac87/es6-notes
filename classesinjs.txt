@@ -1,0 +1,33 @@
+//Classes
+
+class Animal { // initaliaze by class then name then curley braces {}
+  constructor() // withing the class to initalize the object data we use the special constructor keyword. (here we can put as many
+		// parameter as we would like i.e name,height,sex,leather,fullname,)
+}
+
+
+
+class Animal {
+  constructor(name,height){ //here we haved to paramater we want passed the name and height,
+    this.name=name; // the name on right refers to the name that is passing through the constructor,we use this to call that
+    this.height=height;
+  }
+}
+
+class Animal {
+  constructor(name,height){
+    this.name=name;
+    this.height=height;
+  }
+  hello(){
+    console.log(`Hi! Im ${this.name} from the animal kingdom`);
+  }
+}
+
+var king = new Animal("john",4.5); // here we are creating a new instance for the class animal with name john and height 4.5
+king.hello();
+
+
+
+
+
